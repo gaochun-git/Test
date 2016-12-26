@@ -1,0 +1,90 @@
+create database test;
+
+use test;
+
+create table Board(
+		  ID varchar(20),	    <!-- ID -->
+		  Board_Name  varchar(20),  <!-- Board name -->
+		  DateCreated int ,         <!-- 创建时间 -->
+		  describe varchar(20)	    <!-- 描述   写错了-->	
+		  );
+
+
+use test;
+create table Forum(
+		   FID varchar(256),
+		   Forum_Name varchar(256),
+		   Forum_describe varchar(256),
+		   ID varchar(20)
+		   );
+
+use test;
+create table Article(
+		     AID varchar(256),	
+		     theme varchar(256),          <!-- 主题 -->
+		     Post_every  varchar(256),	  <!-- 发帖时间 -->
+		     FID varchar(256),
+		     viewCount  varchar(256),    <!-- 浏览次数 -->
+		     content varchar(1024),       <!-- 内容 写错了-->
+		     UID varchar(256),            
+		     LastReplyDate varchar(256),  <!-- 最后相应时间 -->
+		     LastReplyUID varchar(256)    <!-- 最后回复 --> 
+                     );
+
+use test;
+create table Reply(            <!-- 回复 -->     
+		ReplyTime varchar(256),        <!-- 回帖时间 -->
+		Reply_Content varchar(256),    <!-- 回帖内容 --> 
+		Reply_Title varchar(256),      <!-- 回帖标题 -->
+		UID  varchar(256),             
+		ReplyDate varchar(256),       <!-- 回应时间 -->
+		AID varchar(256)            
+		);
+
+use test;
+create table Moderator(                 <!-- 版主 -->
+		FID varchar(256),
+		UID varchar(256),    
+		OperUID varchar(256),   <!-- 操作UID -->
+		OperDate varchar(256)   <!-- 操作时间 -->
+		);
+
+use test;
+create table User(           <!-- 用户 -->
+		UserName varchar(256),     <!-- 用户名称 -->
+		Password varchar(256)     <!-- 密码 -->
+		);
+
+use test;
+create table UserDesc(     <!-- 显示表结构 -->
+		UID varchar(256),
+		Desci varchar(256),
+		Name varchar(256),
+		Sex varchar(256),
+		Birth_day varchar(256)
+		);
+----------------------------------------------
+use test;
+create table Entity7(
+		UID varchar(256),
+		RoleID  varchar(256)
+		);
+
+use test;
+create table rold(
+		RoleID varchar(256),
+		RoleName varchar(256)
+		);
+use test;
+create table Entity9(
+		RID varchar(256),
+		RoleID varchae(256)
+		);
+use test;
+create table permission(
+		RID varchar(256),
+		RightName varchar(256)
+		);
+
+
+
