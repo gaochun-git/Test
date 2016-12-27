@@ -5,8 +5,8 @@ use test;
 create table Board(
 		  ID varchar(20),	    <!-- ID -->
 		  Board_Name  varchar(20),  <!-- Board name -->
-		  DateCreated int ,         <!-- ´´½¨Ê±¼ä -->
-		  describe varchar(20)	    <!-- ÃèÊö   Ð´´íÁË-->	
+		  DateCreated int ,         <!-- åˆ›å»ºæ—¶é—´ -->
+		  describe varchar(20)	    <!-- æè¿°   å†™é”™äº†-->	
 		  );
 
 
@@ -21,49 +21,49 @@ create table Forum(
 use test;
 create table Article(
 		     AID varchar(256),	
-		     theme varchar(256),          <!-- Ö÷Ìâ -->
-		     Post_every  varchar(256),	  <!-- ·¢ÌûÊ±¼ä -->
+		     theme varchar(256),          <!-- ä¸»é¢˜ -->
+		     Post_every  varchar(256),	  <!-- å‘å¸–æ—¶é—´ -->
 		     FID varchar(256),
-		     viewCount  varchar(256),    <!-- ä¯ÀÀ´ÎÊý -->
-		     content varchar(1024),       <!-- ÄÚÈÝ Ð´´íÁË-->
+		     viewCount  varchar(256),    <!-- æµè§ˆæ¬¡æ•° -->
+		     content varchar(1024),       <!-- å†…å®¹ å†™é”™äº†-->
 		     UID varchar(256),            
-		     LastReplyDate varchar(256),  <!-- ×îºóÏàÓ¦Ê±¼ä -->
-		     LastReplyUID varchar(256)    <!-- ×îºó»Ø¸´ --> 
+		     LastReplyDate varchar(256),  <!-- æœ€åŽç›¸åº”æ—¶é—´ -->
+		     LastReplyUID varchar(256)    <!-- æœ€åŽå›žå¤ --> 
                      );
 
 use test;
-create table Reply(            <!-- »Ø¸´ -->     
-		ReplyTime varchar(256),        <!-- »ØÌûÊ±¼ä -->
-		Reply_Content varchar(256),    <!-- »ØÌûÄÚÈÝ --> 
-		Reply_Title varchar(256),      <!-- »ØÌû±êÌâ -->
+create table Reply(            <!-- å›žå¤ -->     
+		ReplyTime varchar(256),        <!-- å›žå¸–æ—¶é—´ -->
+		Reply_Content varchar(256),    <!-- å›žå¸–å†…å®¹ --> 
+		Reply_Title varchar(256),      <!-- å›žå¸–æ ‡é¢˜ -->
 		UID  varchar(256),             
-		ReplyDate varchar(256),       <!-- »ØÓ¦Ê±¼ä -->
+		ReplyDate varchar(256),       <!-- å›žåº”æ—¶é—´ -->
 		AID varchar(256)            
 		);
 
 use test;
-create table Moderator(                 <!-- °æÖ÷ -->
+create table Moderator(                 <!-- ç‰ˆä¸» -->
 		FID varchar(256),
 		UID varchar(256),    
-		OperUID varchar(256),   <!-- ²Ù×÷UID -->
-		OperDate varchar(256)   <!-- ²Ù×÷Ê±¼ä -->
+		OperUID varchar(256),   <!-- æ“ä½œUID -->
+		OperDate varchar(256)   <!-- æ“ä½œæ—¶é—´ -->
 		);
 
 use test;
-create table User(           <!-- ÓÃ»§ -->
-		UserName varchar(256),     <!-- ÓÃ»§Ãû³Æ -->
-		Password varchar(256)     <!-- ÃÜÂë -->
+create table User(           <!-- ç”¨æˆ· -->
+		UserName varchar(256),     <!-- ç”¨æˆ·åç§° -->
+		Password varchar(256)     <!-- å¯†ç  -->
 		);
 
 use test;
-create table UserDesc(     <!-- ÏÔÊ¾±í½á¹¹ -->
+create table UserDesc(     <!-- æ˜¾ç¤ºè¡¨ç»“æž„ -->
 		UID varchar(256),
 		Desci varchar(256),
 		Name varchar(256),
 		Sex varchar(256),
 		Birth_day varchar(256)
 		);
-----------------------------------------------
+
 use test;
 create table Entity7(
 		UID varchar(256),
