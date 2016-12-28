@@ -6,7 +6,7 @@ create table Board(
 		  ID varchar(20),	    <!-- ID -->
 		  Board_Name  varchar(20),  <!-- Board name -->
 		  DateCreated int ,         <!-- 创建时间 -->
-		  describe varchar(20)	    <!-- 描述   写错了-->	
+		  'describe' varchar(20)	    <!-- 描述 -->	
 		  );
 
 
@@ -78,7 +78,7 @@ create table rold(
 use test;
 create table Entity9(
 		RID varchar(256),
-		RoleID varchae(256)
+		RoleID varchar(256)
 		);
 use test;
 create table permission(
